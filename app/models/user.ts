@@ -15,7 +15,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
 
   @column({ isPrimary: false })
   declare UUID: number
-  
+
   @column()
   declare fullName: string | null
 

@@ -3,10 +3,9 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   init:
-      
     runs-on: ubuntu-latest
     strategy:
-      matrix: 
+      matrix:
         node-version: [21.x]
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
