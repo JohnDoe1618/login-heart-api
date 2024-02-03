@@ -1,6 +1,12 @@
 {
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
+    "target": "es6",
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": false,
+    "baseUrl": ".",
+
     "rootDir": "./",
     "outDir": "./build",
     "paths": {
@@ -20,6 +26,8 @@
       "#tests/*": ["./tests/*.js"],
       "#start/*": ["./start/*.js"],
       "#config/*": ["./config/*.js"],
+      "*": ["types/*"],
     },
+    "types": ["jest"],
   },
 }

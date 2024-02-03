@@ -2,24 +2,24 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-    init:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [21.x]
-        steps:
-            - uses: actions/checkout@v4
-            - name: Check out repository code
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
+  init:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [21.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out repository code
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-            - name: install modules
-              run: npm install
+      - name: install modules
+        run: npm install
 
-            - name: formater
-              run: npm run format
-            
-            - name: linter
-              run: npm run lint
-              # Hello im not John
+      - name: formater
+        run: npm run format
+
+      - name: linter
+        run: npm run lint
+        # Hello im not John
